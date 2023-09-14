@@ -1,7 +1,7 @@
 
 const Header = () => {
     return (
-        <header className="max-w-[1700px] mt-4 mx-auto text-center font-bold lg:text-2xl md:text-xl text-xs ">
+        <header className="max-w-[1700px] mt-6 mx-auto text-center font-bold text-3xl ">
             <h2>Course Registration</h2>
             
         </header>
