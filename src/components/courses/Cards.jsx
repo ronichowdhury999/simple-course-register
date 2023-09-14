@@ -8,6 +8,8 @@ import { BiDollar} from "react-icons/bi";
 const Cards = () => {
     const [allCard, setAllCard] = useState([]);
     const [showCard, setShowCard]= useState([]);
+    const [CreaditRemaining,setCreaditRemaining]= useState(0);
+    const [totalCreaditHrs ,setTotalCreadtiHrs]= useState(0);
 
     useEffect(() => {
         fetch('./data.json')
@@ -16,11 +18,29 @@ const Cards = () => {
     }, [])
     const handalButton =(card)=>{
         const sameCardNameCheck=showCard.find(item =>item.id==card.id);
+        let count = card.credit;
         if(sameCardNameCheck){
            return alert('All Ready Selected')
         }
         else{
+            showCard.forEach(item =>{
+                count= count+item.credit
+
+            })
+            const totalRemainig = 20-count
+            if(totalCreaditHrs >= 25){
+                return alert('Total Credit Over out')
+            }
+            else{
+                setTotalCreadtiHrs(count);
+            setCreaditRemaining(totalRemainig);
+            if(totalRemainig <= 0 ){
+               return alert('Credit Hour Remaining End')
+             }
+             
             setShowCard([...showCard,card])
+            }
+            
         }
     }
 
@@ -51,7 +71,10 @@ const Cards = () => {
 
             </div>
             <div>
-                <Creadit showCard={showCard}></Creadit>
+                <Creadit showCard={showCard}
+                CreaditRemaining={CreaditRemaining}
+                totalCreaditHrs={totalCreaditHrs}
+                ></Creadit>
             </div>
         </div>
     );
