@@ -28,16 +28,15 @@ const Cards = () => {
 
             })
             const totalRemainig = 20-count
-            if(totalCreaditHrs >= 25){
-                return alert('Total Credit Over out')
+            if(count >= 21){
+                return alert('Credit Hour End')
             }
             else{
                 setTotalCreadtiHrs(count);
             setCreaditRemaining(totalRemainig);
-            if(totalRemainig <= 0 ){
-               return alert('Credit Hour Remaining End')
+            if(totalRemainig <= 1 ){
+               return alert('No remainnig')
              }
-             
             setShowCard([...showCard,card])
             }
             
@@ -55,12 +54,12 @@ const Cards = () => {
                                 <img className='w-full rounded-xl' src={card.img} alt="" />
                             </div>
                             <h3 className='font-semibold text-xl py-2'>{card.name}</h3>
-                            <p className=' py-2'>{card.description}</p>
+                            <p className=' py-2 text-gray-500'>{card.description}</p>
                             <div className='flex gap-5 justify-between '>
                                 <button><BiDollar></BiDollar></button>
-                                <p> Price : {card.Price}</p>
+                                <p className='text-gray-500'> Price : {card.Price}</p>
                                 <button><BiBookOpen></BiBookOpen></button>
-                                <p>Credit : {card.credit}hr</p>
+                                <p className='text-gray-500'>Credit : {card.credit}hr</p>
                             </div>
                             <div className='text-center mt-4 '>
                                 <button onClick={()=>handalButton(card)} className='btn text-white font-semibold rounded-xl bg-blue-500 w-full py-2'>Select</button>
