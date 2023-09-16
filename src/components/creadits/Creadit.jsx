@@ -13,7 +13,7 @@ const Creadit = ({ showCard,CreaditRemaining,totalCreaditHrs}) => {
                     ))
                 }
                 <div><h3 className='font-semibold text-xl text-gray-500 border-b-2 border-black border-t-2 mt-4 py-4'>Total Credit Hour : {totalCreaditHrs}</h3></div>
-                <h3 className='font-semibold text-xl mt-4 text-gray-500'>Total Price : 98000 USD</h3>
+                <h3 className='font-semibold text-xl mt-4 text-gray-500'>Total Price : 0 USD</h3>
             </div>
         </div>
 

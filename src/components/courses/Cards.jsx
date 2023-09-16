@@ -51,7 +51,7 @@ const Cards = () => {
                                 <img className='w-full rounded-xl' src={card.img} alt="" />
                             </div>
                             <h3 className='font-semibold text-xl py-2'>{card.name}</h3>
-                            <p className=' py-2 text-gray-500'>{card.description}</p>
+                            <p className=' py-2 text-gray-500'>{card.description.slice(0,130)}..</p>
                             <div className='flex gap-5 justify-between '>
                                 <p className='text-gray-500 flex items-center'><span className='text-2xl'><BiDollar></BiDollar></span> Price : {card.Price}</p>
                                 <p className='text-gray-500 flex items-center gap-2'><span className='text-2xl'><BiBookOpen></BiBookOpen></span> Credit : {card.credit}hr</p>

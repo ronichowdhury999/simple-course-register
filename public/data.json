@@ -4,7 +4,7 @@
       "name": "Introduction C Programming",
       "img": "https://i.ibb.co/vhTN79b/Rectangle-2.png",
       "Price": 15000,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description":"C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972.",
       "credit": 1
     },
     {
@@ -12,7 +12,7 @@
       "name": "Introduction to Algorithms",
       "img": "https://i.ibb.co/0FMvPY5/Rectangle-2-1.png",
       "Price": 50000,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "is a widely used and influential textbook in the field of computer science and algorithms",
       "credit": 2
     },
     {
@@ -20,7 +20,7 @@
       "name": "Introduction to C++ for DSA",
       "img": "https://i.ibb.co/GTFdZmL/Rectangle-2-2.png",
       "Price": 25000,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "C++ has a rich standard library that includes a wide range of classes and functions for implementing..",
       "credit": 10
     },
     {
@@ -28,7 +28,7 @@
       "name": "Basic Data Structures",
       "img": "https://i.ibb.co/vLg7X9g/Rectangle-2-3.png",
       "Price": 10000,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "Basic data structures are fundamental building blocks in computer science and programming. They are used to store, organize, and manipulate data efficiently.",
       "credit": 5
     },
     {
@@ -36,7 +36,7 @@
       "name": "Introduction to OOP Python",
       "img": "https://i.ibb.co/BC33BXc/Rectangle-2-4.png",
       "Price": 40000,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "Python is a versatile and powerful programming language that fully supports OOP principles. Here's an introduction to OOP in Python:",
       "credit": 5
     },
     {
@@ -44,7 +44,7 @@
       "name": "Software Engineering",
       "img": "https://i.ibb.co/vDHBjvh/Rectangle-2-5.png",
       "Price": 60000,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "Software engineering is a systematic and disciplined approach to developing and maintaining software systems.",
       "credit": 2
     },
     {
@@ -52,7 +52,7 @@
       "name": "AWS, Cloud Computing",
       "img": "https://i.ibb.co/d0Sdr9H/Rectangle-2-6.png",
       "Price": 35000,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "Amazon Web Services (AWS) is one of the leading providers of cloud computing services, offering a wide range of tools and services.",
       "credit": 5
     },
     {
@@ -60,7 +60,7 @@
       "name": "Database (MySQL)",
       "img": "https://i.ibb.co/w7GWHQP/Rectangle-3.png",
       "Price": 55000,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "MySQL is a popular open-source relational database management system (RDBMS) known for its reliability, and ease of use.",
       "credit": 5
     },
     {
@@ -68,7 +68,7 @@
       "name": "Problem-Solving Part",
       "img": "https://i.ibb.co/tPrG5Ld/Rectangle-3-1.png",
       "Price": 80000,
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "Problem-solving is a critical skill in various aspects of life, including academics, work, and personal development. Here's a step-by-step guide to effective problem-solving",
       "credit": 2
     }
   ]
