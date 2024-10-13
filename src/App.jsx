@@ -1,15 +1,15 @@
 import './App.css'
 import Cards from './components/courses/cards'
-import Header from './components/header/header'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from './components/Navbar/Navbar';
 function App() {
   return (
-    <>
-    <Header></Header>
+    <div className='max-w-[1700px] mx-auto'>
+    <Navbar/>
       <Cards></Cards>
       <ToastContainer />
-    </>
+    </div>
   )
 }
 

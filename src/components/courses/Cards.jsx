@@ -7,25 +7,33 @@ import { toast } from 'react-toastify';
 
 const Cards = () => {
     const [allCard, setAllCard] = useState([]);
+
     const [showCard, setShowCard] = useState([]);
+
     const [CreaditRemaining, setCreaditRemaining] = useState(20);
     const [totalCreaditHrs, setTotalCreadtiHrs] = useState(0);
+    const [totalPrice ,setTotalPrice]= useState(0);
+    console.log(totalPrice);
 
     useEffect(() => {
         fetch('./data.json')
             .then(res => res.json())
             .then(data => setAllCard(data))
     }, [])
+
     const handalButton = (card) => {
+        console.log(card);
         const isClick = showCard.find(item => item.id == card.id);
         let count = card.credit;
+        let price = card.Price;
+
+        console.log(count);
         if (isClick) {
             return toast.error("sorry , this already selected", { theme: "colored" })
-        }
-        else {
+        }else {
             showCard.forEach(item => {
                 count = count + item.credit
-
+                price = price + item.Price
             })
             const totalRemainig = 20 - count
             if (count >= 21) {
@@ -34,19 +42,19 @@ const Cards = () => {
             else {
                 setTotalCreadtiHrs(count);
                 setCreaditRemaining(totalRemainig);
+                setTotalPrice(price)
                 setShowCard([...showCard, card])
             }
-
         }
     }
 
     return (
-        <div className="max-w-[1700px] mx-auto lg:px-10 md:px-8 px-4 lg:flex md:flex mt-8 ">
-            <div className="lg:w-9/12 md:w-9/12 grid lg:grid-cols-3 gap-6 md:grid-cols-2 grid-cols-1 ">
+        <div className="px-4 lg:flex mt-8 ">
+            <div className="lg:w-9/12  grid md:grid-cols-3 gap-6 grid-cols-1 ">
 
                 {
                     allCard.map(card => (
-                        <div key={card.id} className='border-2 p-3 rounded-lg shadow-lg bg-slate-200'>
+                        <div  onClick={() => handalButton(card)} key={card.id} className='border-2 p-5 rounded-lg shadow-lg bg-slate-200 cursor-pointer hover:border-blue-600'>
                             <div>
                                 <img className='w-full rounded-xl' src={card.img} alt="" />
                             </div>
@@ -55,9 +63,6 @@ const Cards = () => {
                             <div className='flex gap-5 justify-between '>
                                 <p className='text-gray-500 flex items-center'><span className='text-2xl'><BiDollar></BiDollar></span> Price : {card.Price}</p>
                                 <p className='text-gray-500 flex items-center gap-2'><span className='text-2xl'><BiBookOpen></BiBookOpen></span> Credit : {card.credit}hr</p>
-                            </div>
-                            <div className='text-center mt-4 '>
-                                <button onClick={() => handalButton(card)} className='btn text-white font-semibold focus:bg-purple-600 rounded-xl bg-blue-500 w-full py-2'>Select</button>
                             </div>
                         </div>))
                 }
@@ -68,6 +73,7 @@ const Cards = () => {
                 <Creadit showCard={showCard}
                     CreaditRemaining={CreaditRemaining}
                     totalCreaditHrs={totalCreaditHrs}
+                    totalPrice ={totalPrice}
                 ></Creadit>
             </div>
         </div>
